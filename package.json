@@ -1,0 +1,16 @@
+{
+  "name": "@jbaptista/eds-test",
+  "collaborators": [
+    "Jaden Baptista <jbaptista@eds.tech>"
+  ],
+  "description": "Testing for EDS",
+  "version": "0.0.1",
+  "files": [
+    "eds_test_bg.wasm",
+    "eds_test.js",
+    "eds_test.d.ts"
+  ],
+  "module": "eds_test.js",
+  "types": "eds_test.d.ts",
+  "sideEffects": false
+}
