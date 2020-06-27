@@ -15,17 +15,13 @@
 			const get_data = () => {
 				return [ // this array contains the ids of the relevant inputs. This is the order of the parameters of the Rust run_load function.
 					'square-feet'
-				].map(id => document.getElementById(id).value);
+				].map(id => parseFloat(document.getElementById(id).value));
 			};
 
 			const define_default = id => {
 				return {
 					'square-feet': 1700
 				}[id];
-			};
-
-			const display_results = results => {
-				document.getElementById("output").innerHTML = results;
 			};
 
 			const run = async () => {
@@ -36,7 +32,7 @@
 				});
 
 				document.getElementById("run-load").addEventListener("click", function () {
-					display_results(run_load(...get_data()));
+					run_load(...get_data());
 				});
 			}
 
