@@ -45,18 +45,11 @@ function getUint8Memory0() {
 function getStringFromWasm0(ptr, len) {
     return cachedTextDecoder.decode(getUint8Memory0().subarray(ptr, ptr + len));
 }
-
-const u32CvtShim = new Uint32Array(2);
-
-const uint64CvtShim = new BigUint64Array(u32CvtShim.buffer);
 /**
-* @param {BigInt} square_feet
+* @param {number} square_feet
 */
 export function run_load(square_feet) {
-    uint64CvtShim[0] = square_feet;
-    const low0 = u32CvtShim[0];
-    const high0 = u32CvtShim[1];
-    wasm.run_load(low0, high0);
+    wasm.run_load(square_feet);
 }
 
 function isLikeNone(x) {

@@ -1,15 +1,15 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {BigInt} square_feet 
+* @param {number} square_feet 
 */
-export function run_load(square_feet: BigInt): void;
+export function run_load(square_feet: number): void;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly run_load: (a: number, b: number) => void;
+  readonly run_load: (a: number) => void;
   readonly __wbindgen_exn_store: (a: number) => void;
 }
 
